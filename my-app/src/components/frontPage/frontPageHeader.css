@@ -1,0 +1,54 @@
+.front-page-backgoundBox {
+    /* background image css */
+    background-image: url('../../../public/heroimg.jpg');
+    background-size: 300%;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    /* to make sure it doesn't flow over the app size and to make she it's the correct height */
+    overflow: hidden;
+    height: 50rem;
+
+
+    /* grid css */
+    display: grid;
+    grid-template-columns: min-content(3, 1fr);
+    grid-template-rows: repeat(8, 1fr);
+
+}
+
+.LandrupLogo{
+    grid-area: 2/1/2/3;
+}
+
+.HomeLoginBtn {
+    /* for placement of link and the text in it */
+    text-align: center;
+    grid-area: 8/1/7/3;
+    margin: 0 4.5rem;
+    max-height: 2rem;
+
+
+    /* rounding the corners and background colour */
+    border-radius: 0.5rem;
+    background-color: #E9E9E9;
+
+
+    /* text styling */
+    color: #003147;
+    font-size: 1.12rem;
+
+
+    /* shadow under button */
+    box-shadow: 0.3rem 0.3rem 0.3rem #161616;
+}
+
+.ScrollDownBtn {
+    /* row start, colum start,row end, column end */
+    grid-area: 8/1/9/3;
+
+    /* icon styling */
+    font-size: 5rem;
+    color: #003147;
+
+}
