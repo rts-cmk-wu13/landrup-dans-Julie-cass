@@ -12,19 +12,19 @@
 
     /* grid css */
     display: grid;
-    grid-template-columns: min-content(3, 1fr);
+    grid-template-columns: repeat(3, minmax(3, 1fr));
     grid-template-rows: repeat(8, 1fr);
 
 }
 
-.LandrupLogo{
+.LandrupLogo {
     grid-area: 2/1/2/3;
 }
 
 .HomeLoginBtn {
     /* for placement of link and the text in it */
     text-align: center;
-    grid-area: 8/1/7/3;
+    grid-area: 7/1/8/5;
     margin: 0 4.5rem;
     max-height: 2rem;
 
@@ -45,10 +45,10 @@
 
 .ScrollDownBtn {
     /* row start, colum start,row end, column end */
-    grid-area: 8/1/9/3;
+    grid-area: 8/2/9/3;
 
     /* icon styling */
-    font-size: 5rem;
+    font-size: 8rem;
     color: #003147;
 
 }
