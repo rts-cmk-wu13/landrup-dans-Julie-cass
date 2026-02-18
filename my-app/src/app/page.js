@@ -1,4 +1,5 @@
 import FrontPageHeader from "@/components/frontPage";
+import Newsletter from "@/components/newsletter";
 import Activities from "@/components/welcomeActivities";
 
 
@@ -9,6 +10,8 @@ export default function Home() {
      <FrontPageHeader />
 
      <Activities />
+
+     <Newsletter />
       </main>
     </div>
   );
