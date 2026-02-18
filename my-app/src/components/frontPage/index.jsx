@@ -15,7 +15,7 @@ export default function FrontPageHeader() {
 
                      <Link className="HomeLoginBtn" href="/login">Log ind her</Link>
 
-                     <Link className="ScrollDownBtn" href="/login"><MdOutlineKeyboardDoubleArrowDown /></Link>
+                     <Link className="ScrollDownBtn" href="/#TeamTypes"><MdOutlineKeyboardDoubleArrowDown /></Link>
 
                  </div>
 
