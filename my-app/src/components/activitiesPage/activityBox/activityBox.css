@@ -1,0 +1,41 @@
+.ActivitySection {
+    max-width: 23rem;
+    margin: 0 auto;
+}
+
+
+.ActivityContainer {
+    position: relative;
+
+    max-width: 23rem;
+    padding: 1rem 0;
+
+}
+
+.ActivityImage {
+    border-radius: 1.3rem 1.3rem 0 1.3rem;
+    width: 100%;
+    height: 23rem;
+}
+
+.ActivityText {
+    position: absolute;
+    z-index: 4;
+    top: 18.4rem;
+
+
+    background-color: #00134775;
+    border-radius: 0 1.3rem 0 1.3rem;
+    width: 100%;
+    padding: 1rem 0;
+}
+
+.ActivityName {
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.minToMaxAge {
+    font-size: 1.1rem;
+
+}

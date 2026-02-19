@@ -1,4 +1,4 @@
-import LoginForm from "@/components/loginForm/LoginForm";
+import LoginForm from "@/components/frontPage/loginForm/LoginForm";
 import LogoComp from "@/components/Logo";
 import Link from "next/link";
 
@@ -10,7 +10,7 @@ export default function LoginPage() {
 
         
         <section className="LoginPageSec">
-            <h1>Log ind</h1>
+            <h1 className="loginTitle">Log ind</h1>
 
             <LoginForm />
 

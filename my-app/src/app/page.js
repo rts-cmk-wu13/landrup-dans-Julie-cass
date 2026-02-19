@@ -1,6 +1,6 @@
 import FrontPageHeader from "@/components/frontPage";
-import Newsletter from "@/components/newsletter";
-import Activities from "@/components/welcomeActivities";
+import Newsletter from "@/components/frontPage/newsletter";
+import Activities from "@/components/frontPage/welcomeActivities";
 
 
 export default function Home() {

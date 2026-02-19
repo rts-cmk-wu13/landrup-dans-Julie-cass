@@ -51,7 +51,12 @@ har også gjort activities page'en klar så jeg kan redirecte til den når man h
 (9:45 - 10:03)
 css'en til login form er færdig, var meget simplet at lave.
 
-(10:05 - )
+(10:05 - 11:30)
+lavet aktiviter og detail visning af aktiviter
+puttet begge fetch point is `src/lib/dal.js`
+importet det ind i `page.js` og `[id]/page.jsx`
+
+på importtet af component puttet jeg en prop på for at fortælle koden at den skal tage resulterne som gemmes som `ACTIVITY` som en prop hvor jeg så brugte `ACTIVITY` til detailvisning og `a` til listevisningen.
 
 Eftermiddag - (tidspunkt)
 

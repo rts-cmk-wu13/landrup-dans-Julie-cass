@@ -1,0 +1,13 @@
+import ActivityDetail from "@/components/activityDetail/ActivityDetail";
+import { getActivitiesById } from "@/lib/dal"
+
+export default async function ActivityDetails({ params }) {
+
+    const { id } = await params;
+    const ACTIVITY = await getActivitiesById(id)
+    return (
+        <>
+           <ActivityDetail ACTIVITY={ACTIVITY}/>
+        </>
+    )
+}
