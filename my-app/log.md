@@ -69,6 +69,10 @@ div'en er der for at hjælpe med at på icon og text over hinanden og i midten.
 `.NavligationSec` er den som gøre menu'en fixed i bunden af siden, og `.NavWrapper` gør så den har en baggrund.
 
 jeg rettet også lidt i global styling så der er en bottom padding, så menu'en ikke dækker noget infomation.
+
+
+(15:05 - 15:18)
+har kun gjort lidt klar til at lave testmonial delen af velkommen siden, der ikke noget code og fortælle om i dette commit da jeg kun har lave component mappen med to filer og importet det ind i `page.js`
 ## Dag 3
 
 Morgen - (tidspunkt)  
