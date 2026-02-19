@@ -10,22 +10,32 @@ Husk, at du ikke må arbejde på din opgave mellem kl. 16:00 og kl. 8:00.
 
 Morgen - (9:40 - 11:32)
 har fået lavet de meste af forside delen med baggrunds billede, har også fået login ind i men har ikke noget css på det i nu.
+kavet en component folder `frontpage` med en index.jsx file og css file.
+index.jsx er sat up til at jeg kan putte heroimage som baggrund på en div og importer en masse andre dele ind some skal brugs så som logo, log ind og scroll ned pillene.
+
+log ind består af to filer i folderen logindForm.
+`LoginForm.jsx` er en client component mens `action.js` er server component.
+den laver et api-kald `/auth/login` som bliver valideret af zod, hvis log ind er 
+vellykket, bliver der oprettet en cookie.
 
 
 Eftermiddag - (12:13 - 12:28)
-blev færdig med log ind delen a velkommen side, mangler stadig logo som er sit eget component
+så blev jeg helt førdig med css'en til hero billede delen af forsiden. det eneste der mangler er logoet.
+jeg lavet hele designet med hjælp af display grid. logo har fået minimal styling lige nu da den ikke er inde.
 
 (12:30 - 13:30)
 fik lavet all holdtyper og stylet dem, tænker at hvis jeg for tid at jeg vil kigge på om det kan blive lavet anderledes.
 lige nu er den sat up med en aktivitet i deres eget jsx file, importet ind i en index file.
+
 rettet også font style til den fra figma filen.
 
 (13:35 - 13:58)
 startet på newsletter både med layout my html tags og action.js. tænker imorgen vil jeg gøre det at jeg hopper mellem newsletter og testimonials api arbejdet.
+`index.jsx` i folderen `newsletter` er en simple form component som bruger fromAction fra `action.js` fra samme folder til at checke om du har skrevet din mail med hjælp af zod.
 
 ## Dag 2
 
-Morgen - (tidspunkt)  
+Morgen - (8:25 -)  
 Eftermiddag - (tidspunkt)
 
 ## Dag 3

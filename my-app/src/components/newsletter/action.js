@@ -8,7 +8,7 @@ const schema = z.object({
 });
 
 export default async function SignUpNewsAction(prevState, formData) {
-   const email = formData.get("title");
+   const email = formData.get("email");
 
    
 const result = schema.safeParse({
@@ -18,7 +18,7 @@ const result = schema.safeParse({
 if(!result.success){
     return{
         success: false,
-        values: {title, image},
+        values: {email},
         errors: z.flattenError(result.error).fieldErrors
     }
 }
