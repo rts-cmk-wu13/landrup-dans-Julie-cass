@@ -44,6 +44,15 @@ begge havde nogle fejl i sig som gjort at de ikke virket.
 fejlen for login var at jeg havdet skrevet email når jeg brugt username og det var det forkert api jeg postet til.
 newsletter havdet fejl ved fetchen hvor jeg prøvet at få json data som fik hele siden til at fejle.
 
+(9:17 - 9:37)
+tag mig en pause, men er gået igang med styling for login
+har også gjort activities page'en klar så jeg kan redirecte til den når man har logget ind
+
+(9:45 - 10:03)
+css'en til login form er færdig, var meget simplet at lave.
+
+(10:05 - )
+
 Eftermiddag - (tidspunkt)
 
 ## Dag 3

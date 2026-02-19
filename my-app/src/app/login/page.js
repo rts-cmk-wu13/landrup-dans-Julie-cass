@@ -1,17 +1,21 @@
 import LoginForm from "@/components/loginForm/LoginForm";
+import LogoComp from "@/components/Logo";
 import Link from "next/link";
 
 
-export default function LoginPage(){
-    return(
+export default function LoginPage() {
+    return (
         <>
-<p>logo goes here</p>
+        <LogoComp />
 
-        <h1>Log ind</h1>
+        
+        <section className="LoginPageSec">
+            <h1>Log ind</h1>
 
-        <LoginForm />
+            <LoginForm />
 
-        <p>Er du endnu ikke bruger? <Link href="">Opret dig her.</Link></p>
+            <p>Er du endnu ikke bruger? <Link className="LinkToMakeUser" href="">Opret dig her.</Link></p>
+            </section>
         </>
     )
 }

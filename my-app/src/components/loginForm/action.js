@@ -55,5 +55,5 @@ export async function loginUser(prevState, formData) {
     cookieStore.set("authToken", data.accessToken)
     cookieStore.set("username", data.name)
 
-    return redirect("/")
+    return redirect("/activities")
 }

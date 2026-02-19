@@ -1,5 +1,7 @@
+
+
 export default function LogoComp(){
     return(
-        <p className="LandrupLogo">placeholder for logo</p>
+        <img className='LandrupLogo' src={`/LandrupLogo.png`} alt="LandrupLogo"></img>
     )
 }

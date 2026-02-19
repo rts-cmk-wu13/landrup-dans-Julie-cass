@@ -18,7 +18,10 @@
 }
 
 .LandrupLogo {
-    grid-area: 2/1/2/3;
+    grid-area: 1/1/1/3;
+    padding-top: 3rem;
+
+    max-width: 200%;
 }
 
 .HomeLoginBtn {

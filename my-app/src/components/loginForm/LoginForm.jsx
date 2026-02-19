@@ -1,8 +1,8 @@
 "use client"
 import { useActionState } from "react"
 import { loginUser } from "./action"
-import LogoComp from "../Logo"
 
+import "./loginForm.css"
 
 const initialState = {
     values: {
@@ -20,28 +20,28 @@ export default function LoginForm() {
 
     return (
         <>
-        <LogoComp />
+       
 
         
-            <form action={formAction} noValidate>
+            <form className="loginForm" action={formAction} noValidate>
 
                 {/* username */}
-                <div>
+                <div className="loginInputBox">
                    
-                    <input placeholder="Brugernavn" type="username" name="username" defaultValue={state.values.username} />
+                    <input className="loginInput" placeholder="Brugernavn" type="username" name="username" defaultValue={state.values.username} />
                     {state.errors?.username && <p>{state.errors.username}</p>}
                 </div>
 
                 {/* password */}
-                <div>
+                <div className="loginInputBox">
                   
-                    <input placeholder="Adgangskode" type="password" name="password" defaultValue={state.values.password} />
+                    <input className="loginInput" placeholder="Adgangskode" type="password" name="password" defaultValue={state.values.password} />
                     {state.errors?.password && <p>{state.errors.password}</p>}
 
                 </div>
 
                 {/* submit button */}
-                <button type="submit" disabled={isPending}>{isPending ? "logging ind" : "Log ind"}</button>
+                <button className="loginSubmitBtn" type="submit" disabled={isPending}>{isPending ? "logging ind" : "Log ind"}</button>
 
 
                 {state.errors?.form && <p>{state.errors.form}</p>}
