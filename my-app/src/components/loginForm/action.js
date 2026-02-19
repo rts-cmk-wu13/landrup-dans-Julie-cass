@@ -4,49 +4,56 @@ import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 
 const loginScema = z.object({
-    email: z.email("Intast en gyldig email adresse."),
-    password: z.string().min(6, "password skal være mindst 6 karakterer.")
+    username: z.string()
+        .min(1, "Indtast et brugernavn."),
+    password: z.string().min(1, "Indtast et password")
 })
 
 export async function loginUser(prevState, formData) {
 
-    const email = formData.get("email")
+    const username = formData.get("username")
     const password = formData.get("password")
     const cookieStore = await cookies()
-    console.log(email, password);
+    console.log(username, password);
 
 
-    if (email === prevState.values.email && password === prevState.values.password) {
+    if (username === prevState.values.username && password === prevState.values.password) {
         return prevState
     }
-    const result = loginScema.safeParse({ email, password })
+    const result = loginScema.safeParse({ username, password })
 
     if (!result.success) {
         console.log(z.flattenError(result.error).fieldErrors)
 
         return {
-            values: { email, password },
+            values: { username, password },
             errors: z.flattenError(result.error).fieldErrors
         }
     }
 
-    const response = await fetch("http://localhost:4000/auth/login", {
+    const response = await fetch("http://localhost:4000/api/v1/users", {
         method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ username, password })
     })
+
+    console.log("Status:", response.status)
+
     if (!response.ok) {
+        const text = await response.text()
+        console.log("Server response:", text)
+
         return {
-            values: { email, password },
-            errors: { form: ["suck my weiner"] }
+            values: { username, password },
+            errors: { form: ["Forkert brugernavn eller adgangskode"] }
         }
     }
 
-const data = await response.json()
-cookieStore.set("authToken", data.accessToken)
-cookieStore.set("username", data.name)
+    const data = await response.json()
+    cookieStore.set("authToken", data.accessToken)
+    cookieStore.set("username", data.name)
 
-return redirect("/")
+    return redirect("/")
 }

@@ -25,9 +25,6 @@ if(!result.success){
 
     const response = await fetch("http://localhost:4000/api/v1/newsletter", {
         method: "POST",
-        headers: {
-            "Content-Type": "multipart/form-data"
-        },
         body: formData
     });
 

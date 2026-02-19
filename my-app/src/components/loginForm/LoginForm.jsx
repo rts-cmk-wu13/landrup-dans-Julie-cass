@@ -6,7 +6,7 @@ import LogoComp from "../Logo"
 
 const initialState = {
     values: {
-        email: "",
+        username: "",
         password: "",
     },
     errors: undefined
@@ -25,11 +25,11 @@ export default function LoginForm() {
         
             <form action={formAction} noValidate>
 
-                {/* email */}
+                {/* username */}
                 <div>
                    
-                    <input placeholder="Brugernavn" type="email" name="email" defaultValue={state.values.email} />
-                    {state.errors?.email && <p>{state.errors.email}</p>}
+                    <input placeholder="Brugernavn" type="username" name="username" defaultValue={state.values.username} />
+                    {state.errors?.username && <p>{state.errors.username}</p>}
                 </div>
 
                 {/* password */}

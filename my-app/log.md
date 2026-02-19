@@ -35,7 +35,15 @@ startet på newsletter både med layout my html tags og action.js. tænker imorg
 
 ## Dag 2
 
-Morgen - (8:25 -)  
+Morgen - (8:25 - 8:50)  
+rettet på logbog fra igår da jeg ikke havdet skrevet den mængde infomation som der var håbet for.
+
+(8:52 - 9:15)
+rettet `action.js` for newsletter og login.
+begge havde nogle fejl i sig som gjort at de ikke virket.
+fejlen for login var at jeg havdet skrevet email når jeg brugt username og det var det forkert api jeg postet til.
+newsletter havdet fejl ved fetchen hvor jeg prøvet at få json data som fik hele siden til at fejle.
+
 Eftermiddag - (tidspunkt)
 
 ## Dag 3
