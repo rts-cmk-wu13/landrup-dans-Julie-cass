@@ -10,6 +10,9 @@
 body{
   max-width: 25.6rem;
   margin: 0 auto;
+
+  padding-bottom: 5rem;
+
 background-color: #003147;
 
 font-family: "Ubuntu", sans-serif;

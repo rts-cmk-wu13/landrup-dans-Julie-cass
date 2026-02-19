@@ -1,40 +1,38 @@
 
-.DetailSec{
-
+.ImageWrapper {
+    position: relative;
 }
 
-.DetailDiv{
-
+.DetailImage {
+    width: 100%;
+    display: block;
 }
 
-.DetailImage{
+.DetailBtnBox {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
 
+    background-color: #003147;
+    padding: 0.5rem 3rem;
+    border-radius: 0.5rem;
 }
 
-.DetailInfomationCon{
-max-width: 23rem;
-margin: 0 auto;
+.DetailInfomationCon {
+    max-width: 23rem;
+    margin: 0 auto;
+
+    padding: 1.5rem 0;
 }
 
-.DetailBtnBox{
 
-}
-.DetailBtn{
-
-}
-
-.DetailDesBox{
-
+.DetailDesBox {
+    margin: 1rem 0;
 }
 
 
 /* text css */
-.DetailTitle{
-
-}
-.DetailMinAge{
-
-}
-.DetailDes{
-
+.DetailTitle {
+    font-size: 1.5rem;
+    font-weight: 600;
 }

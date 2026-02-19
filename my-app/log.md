@@ -58,8 +58,17 @@ importet det ind i `page.js` og `[id]/page.jsx`
 
 på importtet af component puttet jeg en prop på for at fortælle koden at den skal tage resulterne som gemmes som `ACTIVITY` som en prop hvor jeg så brugte `ACTIVITY` til detailvisning og `a` til listevisningen.
 
-Eftermiddag - (tidspunkt)
+Eftermiddag - (12:47 - 14:54)
+fik ikke committet meget i denne del men der dukket konstant fejl op.
+skulle rette på noget css i detailevisning så det var responsive, specifikt til `DetailBtnBox`
 
+fik lavet navgations menu, active virker dog ikke men alt andet virker og er responsive
+menu er sat op med et link rundt om en div me icon'et og navnet på menu knappen.
+div'en er der for at hjælpe med at på icon og text over hinanden og i midten.
+
+`.NavligationSec` er den som gøre menu'en fixed i bunden af siden, og `.NavWrapper` gør så den har en baggrund.
+
+jeg rettet også lidt i global styling så der er en bottom padding, så menu'en ikke dækker noget infomation.
 ## Dag 3
 
 Morgen - (tidspunkt)  
