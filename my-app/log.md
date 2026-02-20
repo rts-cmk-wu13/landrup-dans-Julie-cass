@@ -98,6 +98,19 @@ Eftermiddag - (12:17 - 13:06)
 lavet kontact form (ingen function, så kan ikke sende beskeder) med css'en.
 fandt også ud af en måde at gøre form i newsletter responsive med ` box-sizing: border-box;` på input så padding er includeret i max-width'en der givet og `flex-wrap:wrap;` på `.newsletterForm` for at fortælle elementerne at hvis der ikke er nok plads i containeren så skal de gå til en ny linje.
 
+
+(13:33 - 15:20)
+i alt denne tid har jeg prævet at lave profile hvor der skete mange fejl.
+lavet en secret page hvor man skal være logget ind for at åbne den, bare for ikke at kunne see i api'en hvad jeg kan fetche
+
+jeg troede at asset delen af api'et var til holetyperne på forsiden indtil you havdet fetchet det og så det var det ikke, det derfor filerne måske vises som ændret i også selvom de ikke er.
+
+  "const cookieStore = await cookies()
+if(!cookieStore.has('authToken')) return redirect ("/")"
+med dette stykke i `profile/page.js` gør det muligt at checke om man er logget ind, hvis ikke så bliver du sendt tilbage til home page.
+har ikke fået testet den inu da jeg helt ville havde noget af det rigtige infomation til at vise sig.
+
+
 ## Dag 4
 
 Morgen - (tidspunkt)  

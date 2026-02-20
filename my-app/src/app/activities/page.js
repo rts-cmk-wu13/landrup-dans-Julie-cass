@@ -8,7 +8,7 @@ export default async function ActivitiesPage() {
     return (
 
         <>
-            <h1>Aktiviteter</h1>
+            <h1 className="ActivityTitle">Aktiviteter</h1>
             {ACTIVITY.map((a) => (
                 <ActivitiesContainer key={a.id} activity={a} />
             ))}

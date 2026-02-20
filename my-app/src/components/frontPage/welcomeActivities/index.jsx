@@ -6,6 +6,8 @@ import ActivityFour from "./activityFour";
 import "./Activities.css"
 
 export default function Activities() {
+
+    
     return (
         <>
             <section className="ActivitiesContainer">

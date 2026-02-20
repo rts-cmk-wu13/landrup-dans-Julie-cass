@@ -21,7 +21,7 @@
 .ActivityText {
     position: absolute;
     z-index: 4;
-    top: 17.9rem;
+    top: 18.4rem;
 
 
     background-color: #00134775;
@@ -38,4 +38,9 @@
 .minToMaxAge {
     font-size: 1.1rem;
 
+}
+
+/* title on page.js css bc tailwind didn't wanna work 20/02 */
+.ActivityTitle{
+   font-size: 2.2rem;
 }
