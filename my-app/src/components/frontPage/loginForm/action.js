@@ -32,28 +32,22 @@ export async function loginUser(prevState, formData) {
     }
 
     const response = await fetch("http://localhost:4000/api/v1/users", {
-        method: "POST",
+               method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({ username, password })
     })
-
-    console.log("Status:", response.status)
-
     if (!response.ok) {
-        const text = await response.text()
-        console.log("Server response:", text)
-
         return {
             values: { username, password },
-            errors: { form: ["Forkert brugernavn eller adgangskode"] }
+            errors: { form: ["mangler brugernavn eller password"] }
         }
     }
 
-    const data = await response.json()
-    cookieStore.set("authToken", data.accessToken)
-    cookieStore.set("username", data.name)
+const data = await response.json()
+cookieStore.set("authToken", data.accessToken)
+cookieStore.set("username", data.name)
 
     return redirect("/activities")
 }

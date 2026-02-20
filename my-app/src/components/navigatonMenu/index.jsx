@@ -34,8 +34,8 @@ export default function NavigationMenu() {
       </Link>
 
            <Link
-        className={`link ${pathname === '/profil/${id}' ? 'active' : ''}`}
-        href="/profil"
+        className={`link ${pathname === '/profile' ? 'active' : ''}`}
+        href="/profile"
       >
       <div className="NavTextBox">
 <p><IoMdPerson /></p>

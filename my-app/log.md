@@ -75,8 +75,41 @@ jeg rettet også lidt i global styling så der er en bottom padding, så menu'en
 har kun gjort lidt klar til at lave testmonial delen af velkommen siden, der ikke noget code og fortælle om i dette commit da jeg kun har lave component mappen med to filer og importet det ind i `page.js`
 ## Dag 3
 
-Morgen - (tidspunkt)  
-Eftermiddag - (tidspunkt)
+Morgen - (8:21 - 10:28)  
+lavet hele testimonial med carousel ved jeg af embla carousel som jeg installeret i terminal.
+med hjælp fra embla var det meget nemmere og ser meget pænner ud at se på.
+
+i min `dal.js` puttet jeg min fetch for dataen i, hvor jeg også console.log data så jeg var sikker på fetchen virket inden brug.
+`testmonialCards.jsx` bliver importet ind i `testimonials.jsx` som bliver importet ind i `page.js` min homepage.
+
+i `page.js` er der en const før return som awaiter dataen fra mit fetch
+ gave component en prop `testimonial` som bliver ændret til `T` i `testimonialCards.jsx`.
+
+ skrev "export default function TestimonialCards({ testimonial = [] })" for at forhenter rendering fejlen "Each child in a list should have a unique "key" prop." update til dette problem, jeg added (T, index) til min map for at sikkere carousel virket og fik et nyt set data for den næste testimonal.
+ T bliver brugt til at få dataen fra api mens index står for posistionen i arrayet.
+
+
+ (10:47 - 11:20)
+ glemte at lave css for newsletter for gik igang med det.
+ tingene sidder hvor de skal men når man laver skærmen mindre ødelægger alle andre componments layout.
+ har tænkt mig at fixe det til næste commit.
+
+Eftermiddag - (12:17 - 13:06)
+lavet kontact form (ingen function, så kan ikke sende beskeder) med css'en.
+fandt også ud af en måde at gøre form i newsletter responsive med ` box-sizing: border-box;` på input så padding er includeret i max-width'en der givet og `flex-wrap:wrap;` på `.newsletterForm` for at fortælle elementerne at hvis der ikke er nok plads i containeren så skal de gå til en ny linje.
+
+
+(13:33 - 15:20)
+i alt denne tid har jeg prævet at lave profile hvor der skete mange fejl.
+lavet en secret page hvor man skal være logget ind for at åbne den, bare for ikke at kunne see i api'en hvad jeg kan fetche
+
+jeg troede at asset delen af api'et var til holetyperne på forsiden indtil you havdet fetchet det og så det var det ikke, det derfor filerne måske vises som ændret i også selvom de ikke er.
+
+  "const cookieStore = await cookies()
+if(!cookieStore.has('authToken')) return redirect ("/")"
+med dette stykke i `profile/page.js` gør det muligt at checke om man er logget ind, hvis ikke så bliver du sendt tilbage til home page.
+har ikke fået testet den inu da jeg helt ville havde noget af det rigtige infomation til at vise sig.
+
 
 ## Dag 4
 
