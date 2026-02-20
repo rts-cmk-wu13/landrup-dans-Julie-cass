@@ -1,0 +1,67 @@
+.ContactFPcontainer {
+    max-width: 23rem;
+    margin: 0 auto;
+}
+
+
+.ContactFPtitle {
+    font-size: 2.2rem;
+}
+
+
+.ContactFPbox {
+    text-align: center;
+
+}
+
+
+.ContactFPinputbox {
+    padding: 1rem 0;
+}
+
+
+.ContactFPinput {
+    width: 100%;
+    background-color: #E9E9E9;
+    color: #999;
+
+    padding: 0.8rem 1rem;
+      box-sizing: border-box;
+
+}
+
+.messageInput {
+    max-height: 10rem;
+    padding-bottom: 9rem;
+      box-sizing: border-box;
+}
+
+.ContactFPbtn {
+    max-width: 15.9rem;
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border-radius: 0.5rem;
+
+    background-color: #E9E9E9;
+    color: #003147;
+
+}
+
+
+.ContactFPimage {
+    padding: 4rem 0 0 0;
+    margin: 0 auto;
+
+}
+
+
+.ContactFPcomp {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+.ContactFPaddresse,
+.ContactFPphone {
+    font-size: 1.1rem;
+}

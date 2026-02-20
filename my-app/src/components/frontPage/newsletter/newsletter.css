@@ -23,17 +23,20 @@
     text-align: center;
     padding: 1rem 0 0 0;
 
+    flex-wrap: wrap;
 }
 
 
 .newsletterInput {
-    max-width: 15.9rem;
+    max-width: 18rem;
     background-color: #E9E9E9;
     color: #999;
 
     padding: 0 0.5rem;
-    width: 15.9rem;
+    width: 100%;
     height: 2.5rem;
+
+      box-sizing: border-box;
 }
 
 
@@ -42,4 +45,5 @@
     padding: 0.5rem 1rem;
     color: #003147;
     border-radius: 0.5rem;
+
 }

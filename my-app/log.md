@@ -94,7 +94,9 @@ i `page.js` er der en const før return som awaiter dataen fra mit fetch
  tingene sidder hvor de skal men når man laver skærmen mindre ødelægger alle andre componments layout.
  har tænkt mig at fixe det til næste commit.
 
-Eftermiddag - (tidspunkt)
+Eftermiddag - (12:17 - 13:06)
+lavet kontact form (ingen function, så kan ikke sende beskeder) med css'en.
+fandt også ud af en måde at gøre form i newsletter responsive med ` box-sizing: border-box;` på input så padding er includeret i max-width'en der givet og `flex-wrap:wrap;` på `.newsletterForm` for at fortælle elementerne at hvis der ikke er nok plads i containeren så skal de gå til en ny linje.
 
 ## Dag 4
 

@@ -1,4 +1,5 @@
 import Testimonials from "@/components/comments/Testimonials";
+import ContactForm from "@/components/contact";
 import FrontPageHeader from "@/components/frontPage";
 import Newsletter from "@/components/frontPage/newsletter";
 import Activities from "@/components/frontPage/welcomeActivities";
@@ -20,7 +21,8 @@ export default async function Home() {
       
   <Testimonials testimonial={testimonial}/>         
  
-   
+   <ContactForm />
+
       </main>
     </div>
   );
