@@ -3,7 +3,7 @@ import "./testimonialCard.css"
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback } from "react";
 
-import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
+import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 
 export default function TestimonialCards({ testimonial = [] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
@@ -25,8 +25,8 @@ export default function TestimonialCards({ testimonial = [] }) {
 
           <div className="testimonial_container">
 
-            {testimonial.map((T) => (
-              <div className="testimonial_slide">
+            {testimonial.map((T, index) => (
+              <div className="testimonial_slide" key={index}>
                 <p className="testimonialContent" key={T.id}>{T.content}</p>
                 <h3 className="testmonialName">{T.name}</h3>
                 <p className="testmonialOccupation">{T.occupation}</p>
@@ -36,15 +36,15 @@ export default function TestimonialCards({ testimonial = [] }) {
 
           </div>
 
-      
+
         </div>
         <div className="testimonialBtnBox">
-        <button className="testimonial_prev" onClick={goToPrev}>
-          <IoIosArrowBack />
-        </button>
-        <button className="testimonial_next" onClick={goToNext}>
-          <IoIosArrowForward />
-        </button>
+          <button className="testimonial_prev" onClick={goToPrev}>
+            <IoIosArrowBack />
+          </button>
+          <button className="testimonial_next" onClick={goToNext}>
+            <IoIosArrowForward />
+          </button>
         </div>
       </div>
     </>

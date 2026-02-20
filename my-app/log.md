@@ -85,7 +85,9 @@ i min `dal.js` puttet jeg min fetch for dataen i, hvor jeg også console.log dat
 i `page.js` er der en const før return som awaiter dataen fra mit fetch
  gave component en prop `testimonial` som bliver ændret til `T` i `testimonialCards.jsx`.
 
- skrev "export default function TestimonialCards({ testimonial = [] })" for at forhenter rendering fejlen "Each child in a list should have a unique "key" prop."
+ skrev "export default function TestimonialCards({ testimonial = [] })" for at forhenter rendering fejlen "Each child in a list should have a unique "key" prop." update til dette problem, jeg added (T, index) til min map for at sikkere carousel virket og fik et nyt set data for den næste testimonal.
+ T bliver brugt til at få dataen fra api mens index står for posistionen i arrayet.
+
 
  (10:47 - 11:20)
  glemte at lave css for newsletter for gik igang med det.
