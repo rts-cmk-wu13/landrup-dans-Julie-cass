@@ -5,7 +5,7 @@ import { useCallback } from "react";
 
 import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
 
-export default function TestimonialCards({ testimonial}) {
+export default function TestimonialCards({ testimonial = [] }) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
 
   const goToPrev = useCallback(() => {

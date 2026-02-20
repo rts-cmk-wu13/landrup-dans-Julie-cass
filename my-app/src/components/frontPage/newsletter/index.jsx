@@ -2,20 +2,25 @@
 import { useActionState } from "react"
 import SignUpNewsAction from "./action"
 
+import "./newsletter.css"
+
 export default function Newsletter() {
-const [formState, formAction, isPending] = useActionState(SignUpNewsAction,{})
- 
+    const [formState, formAction, isPending] = useActionState(SignUpNewsAction, {})
+
     return (
-        <section>
-            <h2>Nyhedsbrev</h2>
-            <p>Få direkte besked når vi har sæsonstart
+        <section className="newsletterSecContainer">
+            <h2 className="newsletterTitle">Nyhedsbrev</h2>
+            <p className="newsletterText">Få direkte besked når vi har sæsonstart
                 eller afholder arrangementer.</p>
-            <form action={formAction}>
-                <div>
-                    <input type="text" name="email" placeholder="Email" />
-                </div>
-                <button type="submit">Tilmeld</button>
-            </form>
+
+          
+                <form className="newsletterForm" action={formAction}>
+                    <div className="newsletterInputBox">
+                        <input className="newsletterInput" type="text" name="email" placeholder="Email" />
+                    </div>
+                    <button className="newsletterSubminBtn" type="submit">Tilmeld</button>
+                </form>
+        
         </section>
     )
 }

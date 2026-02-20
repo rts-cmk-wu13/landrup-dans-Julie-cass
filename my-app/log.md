@@ -85,6 +85,13 @@ i min `dal.js` puttet jeg min fetch for dataen i, hvor jeg også console.log dat
 i `page.js` er der en const før return som awaiter dataen fra mit fetch
  gave component en prop `testimonial` som bliver ændret til `T` i `testimonialCards.jsx`.
 
+ skrev "export default function TestimonialCards({ testimonial = [] })" for at forhenter rendering fejlen "Each child in a list should have a unique "key" prop."
+
+ (10:47 - 11:20)
+ glemte at lave css for newsletter for gik igang med det.
+ tingene sidder hvor de skal men når man laver skærmen mindre ødelægger alle andre componments layout.
+ har tænkt mig at fixe det til næste commit.
+
 Eftermiddag - (tidspunkt)
 
 ## Dag 4
