@@ -1,9 +1,52 @@
+"use client";
+import "./testimonialCard.css"
+import useEmblaCarousel from "embla-carousel-react";
+import { useCallback } from "react";
+
+import { IoIosArrowBack, IoIosArrowForward  } from "react-icons/io";
+
+export default function TestimonialCards({ testimonial}) {
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true })
+
+  const goToPrev = useCallback(() => {
+    if (emblaApi) emblaApi.scrollPrev();
+  }, [emblaApi]);
+
+  const goToNext = useCallback(() => {
+    if (emblaApi) emblaApi.scrollNext();
+  }, [emblaApi]);
+
+  return (
+    <>
+      <div className="testimonial">
 
 
-export default function TestimonialCards(){
-    return (
-<>
-<h1>bonk</h1>
-</>
-    )
+        <div className="testimonial_viewport" ref={emblaRef}>
+
+          <div className="testimonial_container">
+
+            {testimonial.map((T) => (
+              <div className="testimonial_slide">
+                <p className="testimonialContent" key={T.id}>{T.content}</p>
+                <h3 className="testmonialName">{T.name}</h3>
+                <p className="testmonialOccupation">{T.occupation}</p>
+
+              </div>
+            ))}
+
+          </div>
+
+      
+        </div>
+        <div className="testimonialBtnBox">
+        <button className="testimonial_prev" onClick={goToPrev}>
+          <IoIosArrowBack />
+        </button>
+        <button className="testimonial_next" onClick={goToNext}>
+          <IoIosArrowForward />
+        </button>
+        </div>
+      </div>
+    </>
+  );
 }
