@@ -18,7 +18,7 @@
     height: 23rem;
 }
 
-.ActivityText {
+.ActivityDescription{
     position: absolute;
     z-index: 4;
     top: 18.4rem;

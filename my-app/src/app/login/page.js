@@ -1,4 +1,4 @@
-import LoginForm from "@/components/frontPage/loginForm/LoginForm";
+import LoginForm from "@/components/loginForm/LoginForm";
 import LogoComp from "@/components/Logo";
 import Link from "next/link";
 
@@ -14,7 +14,7 @@ export default function LoginPage() {
 
             <LoginForm />
 
-            <p>Er du endnu ikke bruger? <Link className="LinkToMakeUser" href="">Opret dig her.</Link></p>
+            <p>Er du endnu ikke bruger? <Link className="LinkToMakeUser" href="/opret">Opret dig her.</Link></p>
             </section>
         </>
     )

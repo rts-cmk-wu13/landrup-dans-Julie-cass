@@ -4,7 +4,7 @@ import FrontPageHeader from "@/components/frontPage";
 import Newsletter from "@/components/frontPage/newsletter";
 import Activities from "@/components/frontPage/welcomeActivities";
 
-import { getTestimonials } from "@/lib/dal";
+import { getTestimonials } from "@/dal";
 
 export default async function Home() {
       const testimonial = await getTestimonials()
