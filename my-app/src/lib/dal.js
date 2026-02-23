@@ -1,3 +1,5 @@
+"use server"
+
 export async function getTestimonials() {
   const response = await fetch("http://localhost:4000/api/v1/testimonials");
 

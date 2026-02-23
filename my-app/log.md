@@ -113,7 +113,22 @@ har ikke fået testet den inu da jeg helt ville havde noget af det rigtige infom
 
 ## Dag 4
 
-Morgen - (tidspunkt)  
+Morgen - (8:23 - 10:20)  
+lavet valgfri opgave B
+
+`action.js` er sat op lidt ligesom den for log ind men der er nogle få ændringer som, ".refine((data) => data.password === data.confirmPassword, {
+    message: "password matcher ikke.",
+    path: ["confirmPassword"]
+})". hvad dette gør er at checke om dataet tastet ind i input felte til adgangskode er det samme som der er tastet ind i gentag adgangskode, hvis ikke så for du en error.
+
+anden del jeg har gjort lidt andreledes er at putte dem alle ind i et object "formValues" så jeg ikke behøver at skrive dem alle op for vær gang jeg har brug for values.
+
+i min fetch har jeg også gjort i "body: JSON.stringify" at der bliver presset en role af default på den nye bruger.
+
+når man har lavet en successfuld ny bruger bliver du sendt til log ind siden.
+
+lavet også lidt ændring til login errors.
+
 Eftermiddag - (tidspunkt)
 
 ## Dag 5

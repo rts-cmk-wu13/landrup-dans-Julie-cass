@@ -20,23 +20,24 @@ export default function LoginForm() {
 
     return (
         <>
-       
 
-        
+
+
             <form className="loginForm" action={formAction} noValidate>
-
+                <div className="LoginErrorBox">
+                    <p className="error">{state.errors?.username?.[0]}</p>
+                    <p className="error">{state.errors?.password?.[0]}</p>
+                </div>
                 {/* username */}
                 <div className="loginInputBox">
-                   
+
                     <input className="loginInput" placeholder="Brugernavn" type="username" name="username" defaultValue={state.values.username} />
-                    {state.errors?.username && <p>{state.errors.username}</p>}
                 </div>
 
                 {/* password */}
                 <div className="loginInputBox">
-                  
+
                     <input className="loginInput" placeholder="Adgangskode" type="password" name="password" defaultValue={state.values.password} />
-                    {state.errors?.password && <p>{state.errors.password}</p>}
 
                 </div>
 

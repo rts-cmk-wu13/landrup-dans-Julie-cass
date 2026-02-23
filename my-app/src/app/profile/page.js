@@ -4,7 +4,7 @@ import { redirect } from "next/navigation"
 
 export default async function ProfilePage(){
     const cookieStore = await cookies()
-if(!cookieStore.has('authToken')) return redirect ("/")
+if(!cookieStore.has('authToken')) return redirect ("/login")
 
     return(
         <>
