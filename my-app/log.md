@@ -129,8 +129,8 @@ når man har lavet en successfuld ny bruger bliver du sendt til log ind siden.
 
 lavet også lidt ændring til login errors.
 
-Eftermiddag - (tidspunkt)
-
+Eftermiddag - (10:59 - 15:33)
+fik entet til at virke med profil da man åbenbart skulle arbejde på skolen for at kunne få hjælp.
 ## Dag 5
 
 Morgen - (tidspunkt)  

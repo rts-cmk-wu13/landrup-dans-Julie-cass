@@ -1,6 +1,6 @@
 import ActivityDetail from "@/components/activityDetail/ActivityDetail";
 import NavigationMenu from "@/components/navigatonMenu";
-import { getActivitiesById } from "@/lib/dal"
+import { getActivitiesById } from "@/dal"
 
 export default async function ActivityDetails({ params }) {
 
