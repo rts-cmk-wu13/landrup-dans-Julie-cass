@@ -140,4 +140,7 @@ Morgen - (8:16 - 9:51)
 prøvet igen med at lave profil side virke, har gjort det some videoerne fortæller som at lave auth token til api for token'et og at huske at ændre email til username men min application cookie står tom.
 
 fik kontakt på homepage til at virke, tog `action.js` filen fra newsletter og ændret api'et fetch fik og navnet på functionen.
-Eftermiddag - (tidspunkt)
+
+
+Eftermiddag - (10:50 - 15:35)
+prøvet og lave profile ud fra hvad jeg ved burde min kode være rigtig til at gøre det, men min authToken value bliver aldrig gemt såsiden kan ikke se mig som logget ind. authToken virket til repitition og jeg ved ikke hvad jeg har gjort for den ikke virker her.

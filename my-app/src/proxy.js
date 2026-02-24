@@ -3,7 +3,7 @@ import { NextResponse } from "next/server";
 
 export function proxy(request) {
   if (!request.cookies.has("authToken")) {
-    return NextResponse.redirect(new URL("/login", request.url));
+    return NextResponse.redirect(new URL('/no-access', request.url));
   }
 }
 

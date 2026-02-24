@@ -40,13 +40,13 @@ export async function loginUser(prevState, formData) {
     if (!response.ok) {
         return {
             values: { username, password },
-            errors: { form: ["suck my weiner"] }
+            errors: { form: [""] }
         }
     }
 
 const data = await response.json()
-cookieStore.set("accessToken", data.accessToken)
-cookieStore.set("username", data.name)
+cookieStore.set("authToken", data.Token)
+cookieStore.set("username", data.userId)
 
 return redirect("/activities")
 }
