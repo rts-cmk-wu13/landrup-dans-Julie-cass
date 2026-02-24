@@ -1,13 +1,17 @@
+"use client"
 import "./contactForm.css"
+import { useActionState } from "react"
+import ContactAction from "./action"
 
 export default function ContactForm() {
+    const [formState, formAction, isPending] = useActionState(ContactAction, {})
 
     return (
         <>
             <section className="ContactFPcontainer">
                 <h2 className="ContactFPtitle">Kontakt os</h2>
                 <div className="ContactFPbox">
-                    <form className="ContactFPform" action="">
+                    <form className="ContactFPform" action={formAction}>
 
                         <div className="ContactFPinputbox">
                             <input className="ContactFPinput" type="text" name="name" placeholder="Navn" />

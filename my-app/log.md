@@ -131,7 +131,13 @@ lavet også lidt ændring til login errors.
 
 Eftermiddag - (10:59 - 15:33)
 fik entet til at virke med profil da man åbenbart skulle arbejde på skolen for at kunne få hjælp.
+
+
 ## Dag 5
 
-Morgen - (tidspunkt)  
+Morgen - (8:16 - 9:51)  
+
+prøvet igen med at lave profil side virke, har gjort det some videoerne fortæller som at lave auth token til api for token'et og at huske at ændre email til username men min application cookie står tom.
+
+fik kontakt på homepage til at virke, tog `action.js` filen fra newsletter og ændret api'et fetch fik og navnet på functionen.
 Eftermiddag - (tidspunkt)

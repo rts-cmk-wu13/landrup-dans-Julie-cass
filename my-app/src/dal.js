@@ -3,22 +3,24 @@
 import { cookies } from "next/headers"
 import { redirect } from "next/navigation";
 
-export async function getUserById() {
-    //Second line of defense (apart from proxy)
+ export async function getUserById(id) {
     const cookieStore = await cookies();
-    //Guard clause
-    if (!cookieStore.has("authToken")) return redirect("/no-access");
+    if (!cookieStore.has("accessToken")) return redirect("/no-access");
 
     const response = await fetch(`http://localhost:4000/v1/users/${id}`);
     if(!response.ok){
         throw new Error({message: "Events could not be fetched"})
     }
-    const userData = await response.json();
-    console.log(userData);
-    
-    return userData;
-}
+const data = await response.json()
+console.log("LOGIN DATA:", data)
 
+cookieStore.set("accessToken", data.accessToken)
+cookieStore.set("username", data.name)
+cookieStore.set("role", data.role)
+
+console.log("ROLE SET:", data.role)
+}
+ 
 
 export async function getTestimonials() {
   const response = await fetch("http://localhost:4000/api/v1/testimonials");

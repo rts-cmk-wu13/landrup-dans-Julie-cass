@@ -4,9 +4,8 @@ import { cookies } from "next/headers"
 import { redirect } from "next/navigation"
 
 const loginScema = z.object({
-    username: z.string()
-        .min(1, "Indtast et brugernavn."),
-    password: z.string().min(1, "Indtast et password")
+    username: z.string("Intast en gyldig email adresse."),
+    password: z.string().min(2, "password skal være mindst 2 karakterer.")
 })
 
 export async function loginUser(prevState, formData) {
@@ -31,8 +30,8 @@ export async function loginUser(prevState, formData) {
         }
     }
 
-    const response = await fetch("http://localhost:4000/api/v1/users", {
-               method: "POST",
+    const response = await fetch("http://localhost:4000/auth/token", {
+        method: "POST",
         headers: {
             "Content-Type": "application/json"
         },
@@ -41,14 +40,13 @@ export async function loginUser(prevState, formData) {
     if (!response.ok) {
         return {
             values: { username, password },
-            errors: { form: ["mangler brugernavn eller password"] }
+            errors: { form: ["suck my weiner"] }
         }
     }
 
 const data = await response.json()
-cookieStore.set("authToken", data.accessToken)
+cookieStore.set("accessToken", data.accessToken)
 cookieStore.set("username", data.name)
-cookieStore.set("role", data.role)
 
-    return redirect("/activities")
+return redirect("/activities")
 }
