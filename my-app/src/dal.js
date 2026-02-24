@@ -1,23 +1,35 @@
 "use server";
-
 import { cookies } from "next/headers"
-import { redirect } from "next/navigation";
 
-export async function getUserById() {
-    //Second line of defense (apart from proxy)
-    const cookieStore = await cookies();
-    //Guard clause
-    if (!cookieStore.has("authToken")) return redirect("/no-access");
 
-    const response = await fetch(`http://localhost:4000/v1/users/${id}`);
-    if(!response.ok){
-        throw new Error({message: "Events could not be fetched"})
+export async function getUsersById(userId) {
+  const cookieStore = await cookies()
+  const authToken = cookieStore.get("authToken")
+  console.log("USER ID:", userId);
+  console.log("TOKEN:", authToken);
+
+  const response = await fetch(
+    `http://localhost:4000/api/v1/users/${userId}`,
+    {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: `Bearer ${authToken?.value}`,
+      },
     }
-    const userData = await response.json();
-    console.log(userData);
-    
-    return userData;
+  );
+
+  console.log("STATUS:", response.status);
+
+  if (!response.ok) {
+    const errorText = await response.text();
+    console.log("SERVER ERROR:", errorText);
+    throw new Error("Failed fetching user");
+  }
+
+  return await response.json();
 }
+
 
 
 export async function getTestimonials() {
@@ -35,6 +47,8 @@ export async function getTestimonials() {
   return data;
 }
 
+
+
 export async function getActivities() {
   const response = await fetch(`http://localhost:4000/api/v1/activities/`)
 
@@ -44,6 +58,8 @@ export async function getActivities() {
   return await response.json()
 
 }
+
+
 export async function getActivitiesById(id) {
   const response = await fetch(`http://localhost:4000/api/v1/activities/${id}`)
 
@@ -55,16 +71,3 @@ export async function getActivitiesById(id) {
 }
 
 
-/* export async function getUsersById(id) {
-const response = await fetch(`http://localhost:4000/api/v1/users/${id}`);
-
-  if (!response.ok) {
-    throw new Error("Something went wrong while fetching the user.");
-  }
-  const data = await response.json();
-  console.log("user infomation::", data);
-
-  return data;
-}
-
- */

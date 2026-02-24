@@ -1,20 +1,26 @@
-import ProfilePageComp from "@/components/Profilepage/ProfilePage"
+import { cookies } from "next/headers";
+import { getUsersById, getActivities } from "@/dal";
 
-import { cookies } from "next/headers"
-
-
-
-export default async function ProfilePage({ params }) {
-
+export default async function Profilepage() {
     const cookieStore = await cookies()
-if(!cookieStore.has('authToken')) return redirect ("/login")
+    const userId = cookieStore.get('username')
+    const user = await getUsersById(userId.value)
+    const ACTIVITY = await getActivities()
 
-    return(
+    console.log(user);
+    
+    return (
         <>
-        <main>
-            <h1>this idea better work, bonk</h1>
-           <ProfilePageComp/>
-        </main>
+            <main>
+                <section>
+                    <figure>
+<img src="" alt="" />                   
+ </figure>
+                    <h1>Velkommen</h1>
+                    <p>{user.firstname} {user.lastname}</p>
+                    <p>{user.role}</p>
+                </section>
+            </main>
         </>
     )
 }
